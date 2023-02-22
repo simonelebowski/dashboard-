@@ -22,6 +22,8 @@
   --search-btn-padding: 0.8rem 2.4rem;
   --search-btn-gap: 1.6rem;
 
+
+  --main-bg-clr: #cbd5e1;
 }
 
 * {
@@ -36,7 +38,6 @@ html {
 }
 
 /* --------------REUSABLE CLASSES-------------------- */
-
 .flex {
   display: flex;
 }
@@ -62,9 +63,10 @@ html {
 }
 
 /* --------------MAIN CONTAINER-------------------- */
-
 .main-container {
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
 }
 
 /* --------------SIDEBAR-------------------- */
@@ -72,7 +74,7 @@ html {
   background-color: var(--sidebar-color);
   gap: var(--sidebar-primary-gap);
   padding: var(--sidebar-padding);
-  grid-row: 1 / -1;
+  grid-row: 1 / 3;
 }
 
 .sidebar a {
@@ -129,4 +131,25 @@ html {
   border-radius: 20px;
 }
 
-/* --------------PROJECT CONTAINER-------------------- */
+/* --------------PROJECTS GRID-------------------- */
+.main {
+  background-color: var(--main-bg-clr);
+  align-self: start;
+  min-height: 100vh;
+}
+
+.container {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.projects-grid {
+  grid-column: 1 / span 4
+}
+
+.projects-div {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main-trending-div {
+  grid-column: 5 / 6
+}
